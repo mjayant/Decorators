@@ -1,3 +1,7 @@
+from functools import wraps
+
+
+
 def is_allowed(permission):
     """
 
@@ -12,7 +16,7 @@ def is_allowed(permission):
         :param func: wrapped function
         :return:
         """
-
+        @wraps(func)
         def main_decorators(*args, **kwargs):
             """
 
